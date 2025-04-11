@@ -17,8 +17,7 @@ A simple 2-player dice game built with HTML, CSS, and JavaScript. Designed to he
 - CSS3
 - JavaScript (Vanilla)
 
-## 📸 Screenshots
-*(Add screenshots here if you want)*
+
 
 ## 💡 Learning Outcomes
 - Working with the DOM (query selectors, events, classes)
