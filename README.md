@@ -32,4 +32,4 @@ A simple 2-player dice game built with HTML, CSS, and JavaScript. Designed to he
 4. If you roll 1, your turn ends!
 5. First player to reach **50+** wins! 🎉
 
-## 📂 File Structure
+
