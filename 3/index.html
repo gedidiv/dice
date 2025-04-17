@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Interactive JavaScript modal example with accessibility features">
+  <link rel="stylesheet" href="index.css" />
+  <title>Advanced JavaScript Modal | Portfolio</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Welcome to the <span class="highlight">JavaScript</span> world!</h1>
+    </header>
+    
+    <main class="content">
+      <div class="welcome-text">
+        <p>In this world, you can create <span class="highlight">interactive</span> and <span class="highlight">dynamic</span> web pages.</p>
+        <p>JavaScript is a <span class="highlight">versatile</span> programming language that allows you to add <span class="highlight">functionality</span> to your web pages.</p>
+        <p>With JavaScript, you can manipulate the <span class="highlight">Document Object Model (DOM)</span>, handle <span class="highlight">events</span>, and make <span class="highlight">AJAX</span> requests to fetch data from servers.</p>
+      </div>
+
+      <div class="buttons-container">
+        <button id="openModalBtn" class="btn primary-btn" aria-haspopup="dialog">View Modal</button>
+        <button id="toggleThemeBtn" class="btn secondary-btn">Toggle Theme</button>
+      </div>
+      
+      <!-- Feature showcase section -->
+      <section class="features">
+        <h2>Features Showcase</h2>
+        <ul class="feature-list">
+          <li><span class="feature-icon">✓</span> Accessible modal dialog</li>
+          <li><span class="feature-icon">✓</span> Keyboard navigation support</li>
+          <li><span class="feature-icon">✓</span> Focus management</li>
+          <li><span class="feature-icon">✓</span> Responsive design</li>
+          <li><span class="feature-icon">✓</span> Dark/light theme toggle</li>
+          <li><span class="feature-icon">✓</span> Smooth animations</li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Modal dialog with ARIA attributes for accessibility -->
+    <div id="myModal" class="modal hidden" role="dialog" aria-labelledby="modalHeader" aria-modal="true">
+      <div class="modal-content">
+        <button class="close" aria-label="Close modal">&times;</button>
+        <h2 id="modalHeader">Interactive Modal</h2>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="info">Information</button>
+          <button class="tab-btn" data-tab="demo">Demo</button>
+          <button class="tab-btn" data-tab="code">Code</button>
+        </div>
+        <div class="tab-content">
+          <div id="info" class="tab-pane active">
+            <p>This is an accessible modal example with keyboard navigation.</p>
+            <p>Try using Tab, Shift+Tab, and Escape keys to navigate.</p>
+          </div>
+          <div id="demo" class="tab-pane">
+            <div class="demo-container">
+              <div class="counter-demo">
+                <h3>Counter Demo</h3>
+                <div class="counter-value">0</div>
+                <div class="counter-controls">
+                  <button class="btn small-btn" id="decrementBtn">-</button>
+                  <button class="btn small-btn" id="incrementBtn">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="code" class="tab-pane">
+            <pre><code>// Focus trap implementation
+modal.addEventListener("keydown", function(event) {
+  if (event.key === "Tab") {
+    // Trap focus within modal
+    const focusableElements = modal.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    // ...
+  }
+});</code></pre>
+          </div>
+        </div>
+        <button id="okBtn" class="btn primary-btn">Close Modal</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>Created by <a href="https://github.com/yourusername" target="_blank" rel="noopener">Your Name</a> | <span id="currentYear"></span></p>
+    </footer>
+  </div>
+
+  <script src="index.css"></script>
+</body>
+</html>
